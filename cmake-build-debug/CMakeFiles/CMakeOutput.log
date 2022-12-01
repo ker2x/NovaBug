@@ -1,0 +1,124 @@
+The system is: Windows - 10.0.22621 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Compilateur d'optimisation Microsoft (R) C/C++ version 19.34.31935 pour x64
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.34.31935.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe cmTC_66be4 && [1/2] Building CXX object CMakeFiles\cmTC_66be4.dir\CMakeCXXCompilerABI.cpp.obj
+Remarque : inclusion du fichier :  C:\Users\kerde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.7571.171\bin\cmake\win\share\cmake-3.24\Modules\CMakeCompilerABI.h
+[2/2] Linking CXX executable cmTC_66be4.exe
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.34.31933/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Compilateur d'optimisation Microsoft (R) C/C++ version 19.34.31935 pour x64
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.34.31935.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/CMakeCCompilerId.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe cmTC_53452 && [1/2] Building C object CMakeFiles\cmTC_53452.dir\CMakeCCompilerABI.c.obj
+Remarque : inclusion du fichier :  C:\Users\kerde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.7571.171\bin\cmake\win\share\cmake-3.24\Modules\CMakeCompilerABI.h
+[2/2] Linking C executable cmTC_53452.exe
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe cmTC_13102 && [1/2] Building C object CMakeFiles\cmTC_13102.dir\CheckIncludeFile.c.obj
+Remarque : inclusion du fichier :  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+Remarque : inclusion du fichier :    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vcruntime.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\sal.h
+Remarque : inclusion du fichier :      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\concurrencysal.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vadefs.h
+[2/2] Linking C executable cmTC_13102.exe
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe cmTC_6be9f && [1/2] Building C object CMakeFiles\cmTC_6be9f.dir\CheckIncludeFile.c.obj
+Remarque : inclusion du fichier :  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\stdint.h
+Remarque : inclusion du fichier :   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vcruntime.h
+Remarque : inclusion du fichier :    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\sal.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\concurrencysal.h
+Remarque : inclusion du fichier :    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vadefs.h
+[2/2] Linking C executable cmTC_6be9f.exe
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe cmTC_00a93 && [1/2] Building C object CMakeFiles\cmTC_00a93.dir\CheckIncludeFile.c.obj
+Remarque : inclusion du fichier :  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+Remarque : inclusion du fichier :    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vcruntime.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\sal.h
+Remarque : inclusion du fichier :      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\concurrencysal.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vadefs.h
+[2/2] Linking C executable cmTC_00a93.exe
+
+
+
+Determining size of void* passed with the following output:
+Change Dir: C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe cmTC_4c89a && [1/2] Building C object CMakeFiles\cmTC_4c89a.dir\SIZEOF_VOID_PTR.c.obj
+Remarque : inclusion du fichier :  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+Remarque : inclusion du fichier :   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+Remarque : inclusion du fichier :    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vcruntime.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\sal.h
+Remarque : inclusion du fichier :      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\concurrencysal.h
+Remarque : inclusion du fichier :     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vadefs.h
+Remarque : inclusion du fichier :  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\stdint.h
+Remarque : inclusion du fichier :  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+[2/2] Linking C executable cmTC_4c89a.exe
+
+
+

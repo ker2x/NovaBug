@@ -1,0 +1,31 @@
+C:\Users\kerde\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe -G Ninja -S C:\Users\kerde\CLionProjects\NovaBug -B C:\Users\kerde\CLionProjects\NovaBug\cmake-build-debug
+CMake Warning (dev) at C:/Users/kerde/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/bin/cmake/win/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (VORBIS)
+  does not match the name of the calling package (Vorbis).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  SFML/cmake/Modules/FindVorbis.cmake:25 (find_package_handle_standard_args)
+  SFML/cmake/Macros.cmake:279 (find_package)
+  SFML/src/SFML/Audio/CMakeLists.txt:70 (sfml_find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Error at CMakeLists.txt:17 (find_package):
+  By not providing "FindSFML.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "SFML", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "SFML" with any of
+  the following names:
+
+    SFMLConfig.cmake
+    sfml-config.cmake
+
+  Add the installation prefix of "SFML" to CMAKE_PREFIX_PATH or set
+  "SFML_DIR" to a directory containing one of the above files.  If "SFML"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/kerde/CLionProjects/NovaBug/cmake-build-debug/CMakeFiles/CMakeOutput.log".
