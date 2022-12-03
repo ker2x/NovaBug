@@ -3,18 +3,19 @@
 #include "physic_object.hpp"
 #include "../common/utils.hpp"
 #include "../common/index_vector.hpp"
+#include <execution>
 
 
 struct PhysicSolver
 {
-	CIVector<PhysicObject> objects;
+	mutable CIVector<PhysicObject> objects;
 	CollisionGrid grid;
 	sf::Vector2f world_size;
 
 	// Simulation solving pass count
-	uint32_t solver_iterations;
-	uint32_t sub_steps;
-	sf::Vector2f gravity = { 0.0f, 50.0f };
+	const uint32_t solver_iterations;
+	const uint32_t sub_steps;
+	const sf::Vector2f gravity = { 0.0f, 0.0f };
     float frame_dt;
 
 	// Parameters
@@ -26,10 +27,12 @@ struct PhysicSolver
 		, solver_iterations(1)
 		, sub_steps(2)
 		, world_size(to<float>(width), to<float>(height))
-	{}
+		, frame_dt(0)
+	{
+	}
 
 	// Checks if two atoms are colliding and if so create a new contact
-	void checkContact(uint32_t atom_1, uint32_t atom_2, float dt)
+	void checkContact(const uint32_t atom_1, const uint32_t atom_2, const float dt) const
 	{
 		if (atom_1 == atom_2) {
 			return;
@@ -54,14 +57,18 @@ struct PhysicSolver
 	}
 
 	// Checks an atom collision against a cell
-	void checkAtomsCollisions(uint32_t a, CollisionCell& cell)
+	void checkAtomsCollisions(const uint32_t a, const CollisionCell& cell) const
 	{
-		for (uint8_t i(cell.objects_count); i--;) {
-			checkContact(a, cell.objects[i], frame_dt);
+		for (uint8_t i = 0;  i < cell.objects_count; i++) {
+		//for(uint8_t i(cell.objects_count); i--;) {
+				checkContact(a, cell.objects[i], frame_dt);
 		}
+		//std::for_each(std::begin(cell.objects), std::end(cell.objects),
+		//	[a, this ](uint32_t c) { checkContact(a, c, frame_dt); }
+		//	);
 	}
 
-	void checkAtomCellCollisions(uint32_t id, CollisionCell& cell, uint32_t i)
+	void checkAtomCellCollisions(const uint32_t id, const CollisionCell& cell, const uint32_t i) const
 	{
 		checkAtomsCollisions(cell.objects[i], cell);
 		checkAtomsCollisions(cell.objects[i], grid.data[id + 1]);
@@ -71,7 +78,7 @@ struct PhysicSolver
 	}
 	
 	// Given an atom checks its collisions with close area
-	void checkCellCollisions(uint32_t id)
+	void checkCellCollisions(uint32_t id) const
 	{
 		for (uint8_t i(grid.data[id].objects_count); i--;) {
 			checkAtomCellCollisions(id, grid.data[id], i);
@@ -79,15 +86,18 @@ struct PhysicSolver
 	}
 	
 	// Finds colliding atoms
-	void findContacts()
+	void findContacts() const
     {
-		for (uint32_t i(grid.used_count); i--;) {
-			checkCellCollisions(grid.used[i]);
-		}
+		std::for_each(std::execution::par_unseq, std::begin(grid.used), std::end(grid.used),
+			[this](uint32_t g)
+			{
+				checkCellCollisions(g);
+			}
+		);
 	}
 
 	// Applies impulses to solve collisions
-	void solveCollisions()
+	void solveCollisions() const
 	{
 		for (uint32_t i(solver_iterations); i--;) {
 			findContacts();
@@ -100,14 +110,16 @@ struct PhysicSolver
 		const uint64_t object_id = objects.push_back(object);
 		PhysicObject& new_object = objects[object_id];
 		new_object.index = to<uint32_t>(object_id);
+
 		return object_id;
 	}
     
 	void update(float dt)
 	{
         frame_dt = dt / float(sub_steps);
-        for (uint32_t i(sub_steps); i--;) {
-            addObjectsToGrid();
+		addObjectsToGrid();
+		//		for (uint32_t i(sub_steps); i--;) {
+		for (uint32_t i = 0; i < sub_steps; i++) {
             solveCollisions();
             updateObjects();
         }

@@ -21,7 +21,7 @@ struct Engine
     {
         sf::CircleShape c(0.5f);
         c.setPointCount(32);
-        c.setOrigin(0.5f, 0.5f);
+        c.setOrigin({ 0.5f, 0.5f });
         for (const uint64_t id : entities) {
 			sf::RenderStates states = vp_states;
             const PhysicObject& obj = solver.objects[id];

@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Graphics/PrimitiveType.hpp>
 #include "engine/physics/physics.hpp"
 #include "engine/common/utils.hpp"
 
@@ -10,17 +11,17 @@ struct Renderer
     
     sf::RenderTarget&       target;
     sf::VertexArray         objects_va;
-    sf::Texture             circle_texture;
+    //sf::Texture             circle_texture;
     sf::RenderStates        render_states;
 
     Renderer(sf::RenderTarget& target_, CIVector<PhysicObject>& objects_)
         : objects(objects_)
         , target(target_)
-        , objects_va(sf::Quads)
+        , objects_va(sf::PrimitiveType::Points)
     {
         // Load texture
-        circle_texture.loadFromFile("res/circle.png");
-        render_states.texture = &circle_texture;
+        //circle_texture.loadFromFile("res/circle.png");
+        //render_states.texture = &circle_texture;
         // Initialize vertex array
         const uint64_t objects_count = objects.size();
         objects_va.resize(4 * objects_count);

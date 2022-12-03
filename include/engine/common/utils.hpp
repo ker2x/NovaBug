@@ -31,7 +31,7 @@ static std::string toString(T value)
 
 
 template<typename T>
-float getLength(sf::Vector2<T> v)
+inline float getLength(sf::Vector2<T> v)
 {
     return sqrt(v.x * v.x + v.y * v.y);
 }

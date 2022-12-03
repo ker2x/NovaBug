@@ -30,7 +30,7 @@ struct ViewportHandler
             const float inv_z = 1.0f / z;
             state = sf::RenderStates();
             state.transform.translate(center);
-            state.transform.scale(z, z);
+            state.transform.scale({ z, z });
             state.transform.translate(-offset);
         }
 
